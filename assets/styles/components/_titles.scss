@@ -1,0 +1,137 @@
+// Titles
+
+// Override variables above this line, using the !default flag to allow further overrides.
+@import 'variables/titles';
+
+// Add custom SCSS below these imports and includes.
+@import 'components/titles';
+
+// Book Title
+.book-title-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1004px;
+  min-height: 70px;
+
+  h1.book-title {
+    margin: 0;
+    margin-left: 2em;
+    padding: 0;
+    font-size: 1.2em;
+    text-align: left;
+    width: inherit;
+  }
+}
+
+// Entry Title
+h2.entry-title {
+  color: $dark-grey;
+  font-size: 1.5em;
+  font-weight: 600;
+  text-align: left; }
+
+// Logo / Text on book pages
+.bombadil-logo {
+  font-size: 0;
+  height: 70px;
+  line-height: 70px;
+  margin-left: 28px;
+  padding-top: 0;
+  padding-bottom: 0;
+
+  a img {
+    height: 45px;
+    vertical-align: middle; }
+}
+
+// Nav Bar
+.nav-container {
+  margin: 0;
+
+  nav {
+    align-items: center;
+    background-color: $lumen-blue;
+    box-shadow: none;
+    min-height: 70px; }
+}
+
+.header-logo {
+  height: 45px;
+  vertical-align: middle;
+}
+
+.toc-header-logo {
+  display: block;
+  height: 60px;
+  margin: auto;
+  background-color: transparent;
+  padding: 0;
+}
+
+// Sub Nav section
+.sub-nav {
+  background-color: $off-white;
+  margin-top: 0;
+  min-height: 35px;
+  padding: 0;
+
+  .sub-nav-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 35px;
+    padding: 0;
+    max-width: 1004px;
+
+    .author-wrap {
+      margin: 0;
+      padding: 0 28px;
+      text-align: left;
+      width: inherit;
+
+      h3 {
+        color: #6d6d6d;
+        font-size: 14px;
+        text-align: left;
+      }
+    }
+  }
+}
+
+// Search Bar
+#searchsubmit {
+  background-color: $lumen-blue;
+  border: none;
+  border-radius: 0 2px 2px 0;
+  color: $white;
+  height: 26px;
+  min-width: 50px; }
+
+#searchsubmit:hover {
+  background-color: $lumen-blue-light;
+  cursor: pointer; }
+
+.searchform {
+  float: none;
+  margin: 0;
+  padding: 0 28px;
+
+  div {
+    display: flex;
+    margin-top: -1px; }
+
+  #s {
+    border: 1px solid $light-grey;
+    border-radius: 2px 0 0 2px;
+    height: 24px;
+    line-height: 1em;
+    padding: 0 0.5rem 0 0.5rem;
+    width: 150px;
+  }
+}

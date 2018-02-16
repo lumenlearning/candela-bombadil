@@ -1,7 +1,7 @@
 <!-- MAIN CONTENT -->
 <main id="main-content">
 
-	<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+	<?php the_title( '<h2 class="entry-title">', '</h2>' ); ?>
 
 	<div class="difficulty">
 		<?php do_action( 'display_difficulty_rating', $post->ID ); ?>
@@ -22,7 +22,7 @@
 
 	<?php if ( $citation = Candela\Citation::renderCitation( $post->ID ) ) { ?>
 		<!-- CITATIONS AND ATTRIBUTIONS -->
-		<section role="contentinfo">
+		<section class="citations-section" role="contentinfo">
 			<div class="post-citations sidebar">
 				<div role="button" aria-pressed="false" id="citation-header-<?php print $post->ID; ?>" class="collapsed license-attribution-dropdown"><?php _e( 'Licenses and Attributions' ); ?></div>
 				<div id="citation-list-<?php print $post->ID; ?>" style="display:none;">
@@ -32,17 +32,17 @@
 		</section>
 	<?php } ?>
 
-	<?php if ( show_edit_button() ) { ?>
+	<?php if ( bombadil_show_edit_button() ) { ?>
 		<!-- EDIT PAGE BUTTON -->
-		<?php edit_post_link( __( 'Edit This Page', 'lumen' ), '<div class="edit-page-btn">', '</div>' ); ?>
+		<?php edit_post_link( __( 'Edit This Page', 'lumen' ), '<div class="post-edit-button" role="button">', '</div>' ); ?>
 	<?php } ?>
 
 	<!-- PAGE NAVIGATION BUTTONS -->
 	<?php
-	if ( show_lti_buttons() ) {
-		lti_get_links();
-	} elseif ( show_navigation_buttons() ) {
-		ca_get_links();
+	if ( bombadil_show_lti_buttons() ) {
+		bombadil_lti_get_links();
+	} elseif ( bombadil_show_navigation_buttons() ) {
+		bombadil_get_links();
 	}
 	?>
 

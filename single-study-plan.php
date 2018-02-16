@@ -3,7 +3,7 @@
 /************/
 /*  RESETS  */
 /************/
-
+/*
   h1, h2, h3 {
     font-size: 1.4em;
     text-transform: capitalize;
@@ -32,7 +32,7 @@
     width: 100%;
     padding: 0;
     margin: 0;
-  }
+  }*/
 
 
 </style>

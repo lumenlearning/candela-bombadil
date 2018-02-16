@@ -1,0 +1,28 @@
+// Colors
+
+$white:            #fff;
+$black:            #000;
+$dark-grey:        #1d1d1d;
+$medium-grey:      #959595;
+$light-grey:       #ccc;
+$lighter-grey:     #ddd;
+$lightest-grey:    #eee;
+$off-white:        #f9f9f9;
+$off-grey:         #f1f1f1;
+$lilac:            #6c64ad;
+$lumen-blue-light: #0897cb;
+$lumen-blue:       #077fab;
+$smokey-blue:      #ccd7dd;
+$lightest-blue:    #e3eff6;
+$smokey-green:     #d2dcd2;
+$lightest-green:   #eaf5ea;
+$smokey-purple:    #ded6e2;
+$lightest-purple:  #f7eefc;
+$smokey-red:       #dacacc;
+$lightest-red:     #f3e1e3;
+
+// Override variables above this line, using the !default flag to allow further overrides.
+@import 'variables/colors';
+
+// Add custom SCSS below these imports and includes.
+@import 'components/colors';

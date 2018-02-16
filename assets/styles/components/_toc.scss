@@ -1,0 +1,117 @@
+// Table of Contents
+
+// Override variables above this line, using the !default flag to allow further overrides.
+@import 'variables/toc';
+
+// Add custom SCSS below these imports and includes.
+// @import 'components/toc/center';
+@import 'components/toc/left';
+
+.book-info-container {
+	background-color: $lumen-blue;
+	padding-bottom: 3em; }
+
+.row {
+	margin: 0 auto 3em;
+	max-width: 62.5em;
+	width: 100%;
+	z-index: 1; }
+
+// Top Block
+.book-cover {
+	margin: 2.5em auto 0;
+
+	img {
+		background-color: transparent;
+		border: 0.25em solid #fafafa;
+		box-shadow: none;
+		display: block;
+		margin: 0 auto;
+		max-width: 192px; }
+}
+
+.book-info {
+	color: $white;
+	margin-top: 0;
+
+	h1 {
+		font-size: 1.75em;
+
+		a {
+			color: $white;
+			font-weight: 600; }
+	}
+
+	.entry-title {
+		margin-top: 0;
+		padding: 28px 0 0; }
+
+	.stroke {
+		background: none;
+		border-top: 1px solid $white; }
+}
+
+// Second Block
+.second-block-wrap {
+	background-color: $white;
+	border-radius: 6px;
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+	margin-top: -3em;
+	padding: 1.75em 0.5em 2em;
+
+	h2 {
+		color: $medium-grey;
+		font-size: 0.9em;
+		font-weight: normal;
+		letter-spacing: 0.3em;
+		margin: 0 auto 2em;
+		text-align: center;
+		text-transform: uppercase;
+		border-bottom: 1px solid $lighter-grey;
+		padding-bottom: 1.5em; }
+
+	li.chapter.standard {
+		font-size: 0.9em; }
+
+	a {
+		text-decoration: underline; }
+}
+
+// Third Block
+.third-block-wrap {
+	background-color: $white;
+	border-bottom: 1px solid $lighter-grey;
+	border-top: 1px solid $lighter-grey;
+	font-size: 0.8em;
+
+	.description-book-info {
+		max-width: unset;
+		width: 100%;
+
+		p, a {
+			color: $medium-grey;
+			margin-bottom: 1.25rem;
+			text-align: left; }
+
+		h2 {
+			color: $medium-grey;
+			text-transform: uppercase; }
+
+		.copyright-text a {
+			text-decoration: underline; }
+	}
+}
+
+// Private Block
+.private-block {
+	width: 85%;
+
+	.entry-title, .entry-content p {
+		color: $lightest-grey;
+		font-family: $font-2;
+		text-align: center;
+
+		a {
+			white-space: nowrap; }
+	}
+}

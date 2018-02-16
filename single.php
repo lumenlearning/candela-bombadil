@@ -1,5 +1,5 @@
 <?php
-if ( have_posts() ) {
+if ( pb_is_public() && have_posts() ) {
 	while ( have_posts() ) {
 		the_post();
 		get_header();
@@ -13,7 +13,8 @@ if ( have_posts() ) {
 		}
 	} // endwhile
 } else {
-	pb_private();
+	get_header();
+	include( 'private.php' );
 } // endif
 
 get_footer();

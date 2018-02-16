@@ -1,0 +1,276 @@
+// Pages
+
+// Override variables above this line, using the !default flag to allow further overrides.
+@import 'variables/pages';
+
+// Add custom SCSS below these imports and includes.
+@import 'components/pages';
+
+// Page Structure
+.wrapper, #wrap {
+  max-width: 1004px;
+  width: 100%; }
+
+#wrap {
+  margin: 0; }
+
+#content {
+  box-shadow: none;
+  font-size: 1em;
+  margin: .25em auto;
+  padding: .25em 1.75em 1.75em;
+  width: auto;
+
+  // Ordered and Unordered list restructure
+  ul, ol {
+    font-size: 1rem;
+    list-style-position: outside;
+    margin-left: 2.5em;
+    margin-top: 0.5em; }
+
+  ol {
+    list-style-type: decimal; }
+
+  ul {
+    list-style-type: initial; }
+
+  ol li, ul li {
+    margin-bottom: 0.5em;
+    margin-left: 0; }
+
+  // Tables
+  table {
+    background-color: $white;
+    border: 1px solid $lighter-grey;
+    display: table;
+    margin: 1em auto;
+    text-align: left;
+    width: 100%;
+
+    thead, tbody, tfoot {
+      th, tr, td {
+        font-size: 1em;
+        line-height: 18px;
+        padding: 9px 12px; }
+
+      // sometimes, wordpress adds p tags around content, so reset font size
+      p {
+        font-size: 1em; }
+    }
+
+    thead, tfoot {
+      th, td {
+        background-color: $off-grey; }
+    }
+
+    tbody {
+      tr:nth-child(even) {
+        background-color: $off-white; }
+
+      tr:nth-child(odd) {
+        background-color: $white; }
+    }
+
+    tfoot td {
+      color: #888;
+      font-size: 12px;
+      font-style: italic;
+      font-weight: bold;
+    }
+  }
+
+  .entry-content, .licensing {
+    a {
+      color: $lilac;
+      font-weight: 600;
+      text-decoration: underline; }
+
+    a:hover {
+      color: $lumen-blue;
+      font-weight: 600; }
+  }
+
+  .search-results {
+    a.more-tag {
+      color: $lilac;
+      font-weight: 600;
+      text-decoration: underline; }
+
+    a.more-tag:hover {
+      color: $lumen-blue;
+      font-weight: 600; }
+  }
+
+  // Images with captions
+  .wp-caption {
+    background-color: transparent;
+
+    // add a smidgen of space between image and caption
+    p {
+      margin-bottom: 5px; }
+
+    p.wp-caption-text {
+      background-color: $lightest-grey;
+      padding: 10px;
+      text-align: justify;
+      text-indent: 0; }
+  }
+
+  .wp-caption.aligncenter,
+  .wp-caption.alignleft,
+  .wp-caption.alignright,
+  .wp-caption.alignnone {
+    padding-top: 0px;
+    padding-bottom: 5px;
+    padding-left: 0px;
+    padding-right: 0px;
+
+    img {
+      width: 100%; }
+  }
+
+  // no text indent when a captioned image is floated
+  .wp-caption.aligncenter + p,
+  .wp-caption.alignleft + p,
+  .wp-caption.alignright + p,
+  .wp-caption.alignnone  + p,
+  .wp-nocaption.aligncenter + p,
+  .wp-nocaption.alignleft + p,
+  .wp-nocaption.alignright + p,
+  .wp-nocaption.alignnone  + p {
+    text-indent: 0;
+  }
+
+  .alignleft {
+    float: left;
+    margin-right: 1em; }
+
+  .alignright {
+    float: right;
+    margin-left: 1em; }
+
+  .aligncenter {
+    display: block;
+    margin-bottom: 1em;
+    margin-left: auto;
+    margin-right: auto; }
+}
+
+// Page content
+
+// Textboxes
+//
+// NOTE: The `.bcc-*` classes are deprecated in favor of `.textbox`, but they
+//       are defined here for backwards compatibility.
+div.textbox, div.bcc-box {
+  border: 1px solid $black;
+  margin: 10px 0 30px;
+  padding: 10px;
+
+  h3 {
+    border-top-right-radius: 0.23em;
+    border-top-left-radius: 0.23em;
+    font-size: 1.2em;
+    margin: 0em 0px 1em;
+    padding: 1em 0;
+    text-transform: uppercase; }
+
+  ul, ol {
+    line-height: 1.6;
+    margin: 1em 1.5em !important;
+  }
+}
+
+div.bcc-box {
+  h3 {
+    margin: 0em -1.6em 1.35em -1.6em;
+  }
+}
+
+div.learning-objectives,
+div.key-takeaways,
+div.exercises,
+div.examples,
+div.bcc-warning,
+div.tryit {
+  @extend div.textbox;
+  padding: 0em 2em 1em; }
+
+div.learning-objectives {
+  background-color: $lightest-grey;
+
+  h3 {
+    background-color: $lighter-grey;
+    color: $dark-grey;
+    margin: 0em -1.6em 1.35em -1.6em; }
+}
+
+div.key-takeaways {
+  background-color: $lightest-green;
+
+  h3 {
+    background-color: $smokey-green;
+    color: $dark-grey;
+    margin: 0em -1.6em 1.35em -1.6em; }
+}
+
+div.exercises {
+  background-color: $lightest-blue;
+
+  h3 {
+    background-color: $smokey-blue;
+    color: $dark-grey;
+    margin: 0em -1.6em 1.35em -1.6em; }
+}
+
+div.examples, div.bcc-warning {
+  background-color: $lightest-red;
+
+  h3 {
+    background-color: $smokey-red;
+    color: $dark-grey;
+    margin: 0em -1.6em 1.35em -1.6em;
+    text-align: center; }
+
+}
+
+div.bcc-warning, div.tryit {
+  border-radius: 0.35em;
+  float: none;
+  margin-bottom: 1.35em; }
+
+div.tryit {
+  background-color: $lightest-purple;
+
+  h3 {
+    background-color: $smokey-purple;
+    color: $dark-grey;
+    margin: 0em -1.6em 1.35em -1.6em;
+    text-align: center; }
+}
+
+blockquote {
+  margin: 1.5em 0;
+  padding: 2em 2em 2.5em 4em;
+
+  p {
+      color: #6f6f6f;
+      font-size: 1.15em;
+      line-height: 1.6; }
+}
+
+// for books using different glossary strategy
+.textbox div[data-type="glossary"],
+.textbox div[data-type="definition"] {
+  font-size: 16px;
+  hyphens: none;
+  line-height: 1.6; }
+
+// Access Denied Page
+h2.entry-title.denied-title,
+div.entry-content.denied-text p {
+  text-align: center;
+
+  a {
+    white-space: nowrap; }
+}

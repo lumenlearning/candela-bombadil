@@ -1,7 +1,6 @@
 body {
 	font-family: "proxima-nova", sans-serif;
 }
-
 body#tinymce.wp-editor .textbox.tryit h3 {
 	text-transform: uppercase;
   border-top-left-radius: 4px;
@@ -102,4 +101,16 @@ body#tinymce.wp-editor .bcc-box.bcc-warning h3 {
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
   background-color: #dacacc;
+}
+body#tinymce.wp-editor .wp-caption {
+  background-color: #f5f5f5;
+  padding: 10px;
+}
+body#tinymce.wp-editor .wp-caption img {
+	margin-bottom: 1.25rem;
+}
+body#tinymce.wp-editor .wp-caption-dd {
+	padding: 0 5px;
+	text-align: justify;
+	text-indent: 0;
 }
