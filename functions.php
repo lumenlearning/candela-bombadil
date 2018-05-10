@@ -70,6 +70,39 @@ function bombadil_iframe_resize_footer() {
 }
 add_action( 'wp_footer', 'bombadil_iframe_resize_footer', 1000 );
 
+/**
+ * Keep WP from stripping away iframe html in the content editor.
+ *
+ * @param  Array $allowedposttags A collection of allowed tags in the editor.
+ * @return Array $allowedposttags A modified collection of allowed tags in the editor.
+ */
+function bombadil_allow_post_tags( $allowedposttags ) {
+  $allowedposttags['iframe'] = array(
+    'align' => true,
+    'allowFullScreen' => true,
+    'class' => true,
+    'frameborder' => true,
+    'height' => true,
+    'id' => true,
+    'longdesc' => true,
+    'marginheight' => true,
+    'marginwidth' => true,
+    'mozallowfullscreen' => true,
+    'name' => true,
+    'sandbox' => true,
+    'seamless' => true,
+    'scrolling' => true,
+    'src' => true,
+    'srcdoc' => true,
+    'style' => true,
+    'width' => true,
+    'webkitAllowFullScreen' => true
+  );
+
+  return $allowedposttags;
+}
+add_filter( 'wp_kses_allowed_html', 'bombadil_allow_post_tags', 1 );
+
 
 /********************************
  *      APPEARANCE OPTIONS      *
@@ -264,21 +297,21 @@ function bombadil_get_links( $echo = true ) {
 		$prev_chapter = add_query_arg( 'lti_context_id', $_GET['lti_context_id'], $prev_chapter );
 	}
 
-	if ( $echo ) { ?>
-		<div class="bottom-nav-buttons">
-			<?php if ( $prev_chapter && '/' != $prev_chapter ) { ?>
-				<a class="post-nav-button" id="prev" href="<?php echo esc_url( $prev_chapter ); ?>">
-					<?php _e( 'Previous', 'pressbooks' ); ?>
-				</a>
-			<?php }
+	if ( $echo ) :
+	?><nav class="bottom-nav-buttons" role="navigation">
+		<?php if ( '/' !== $prev_chapter ) : ?>
+			<a class="post-nav-button" id="prev" href="<?php echo $prev_chapter; ?>">
+				<?php _e( 'Previous', 'pressbooks' ); ?>
+			</a>
+		<?php endif; ?>
 
-			if ( $next_chapter && '/' != $next_chapter ) { ?>
-				<a class="post-nav-button" id="next" href="<?php echo esc_url( $next_chapter ); ?>">
-					<?php _e( 'Next', 'pressbooks' ); ?>
-				</a>
-			<?php } ?>
-		</div>
-	<?php }
+		<?php if ( '/' !== $next_chapter ) : ?>
+			<a class="post-nav-button" id="next" href="<?php echo $next_chapter; ?>">
+				<?php _e( 'Next', 'pressbooks' ); ?>
+			</a>
+		<?php endif; ?>
+	</nav><?php
+	endif;
 }
 
 /**

@@ -79,6 +79,39 @@
     }
   }
 
+  table.account-table {
+    border: none;
+    width: auto;
+
+    thead {
+      background-color: $white;
+      border-bottom: 1px solid $dark-grey;
+
+      th, td {
+        background-color: $white;
+        padding: 4px 12px;
+        text-align: center; }
+    }
+
+    tbody {
+      tr:nth-child(even) {
+        background-color: $white; }
+
+      tr:nth-child(odd) {
+        background-color: $white; }
+
+      td {
+        padding: 4px 12px;
+        text-align: left; }
+    }
+
+    th.single-rule, td.single-rule {
+      border-bottom: 1px solid $dark-grey; }
+
+    th.double-rule, td.double-rule {
+      border-bottom: 4px double $dark-grey; }
+  }
+
   .entry-content, .licensing {
     a {
       color: $lilac;

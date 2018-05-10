@@ -38,6 +38,19 @@
     width: auto; }
 }
 
+// Page Breaks
+.page-break-after,
+.pdf-page-break-after {
+  page-break-after: avoid !important; }
+
+.page-break-before,
+.pdf-page-break-before {
+  page-break-before: avoid !important; }
+
+.page-break-inside,
+.pdf-page-break-inside {
+  page-break-inside: auto; }
+
 // Footer
 .footer {
   background: none;
