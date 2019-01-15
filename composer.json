@@ -1,8 +1,7 @@
 {
-    "name": "pressbooks/bombadil",
+    "name": "lumenlearning/candela-bombadil",
     "type": "wordpress-theme",
     "license": "GPL 2.0+",
-
     "require": {
       "composer/installers": "~1.3"
     },
