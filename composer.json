@@ -1,28 +1,12 @@
 {
-	"name": "lumenlearning/candela-bombadil",
-	"license": "GPL-2.0+",
-	"version": "1.0",
-	"type": "wordpress-theme",
-	"description": "Bombadil is a child theme of Luther, a Wordpress theme designed for Pressbooks.",
-	"homepage": "https://github.com/lumenlearning/candela-bombadil",
-	"authors": [
-		{
-			"name": "Lumen Learning",
-			"email": "dev@lumenlearning.com",
-			"homepage": "https://lumenlearning.com"
-		}
-	],
-	"keywords": ["ebooks", "publishing", "webbooks"],
-	"support": {
-		"email": "dev@lumenlearning.com",
-		"issues": "https://github.com/lumenlearning/candela-utility/issues/",
-		"docs": "https://github.com/lumenlearning/candela-utility/README.md",
-		"source": "https://github.com/lumenlearning/candela-utility/"
-	},
-	"require": {
-		"composer/installers": "~1.3"
-	},
-	"require-dev": {
-		"humanmade/coding-standards": "^0.2.1"
-	}
+    "name": "pressbooks/bombadil",
+    "type": "wordpress-theme",
+    "license": "GPL 2.0+",
+
+    "require": {
+      "composer/installers": "~1.3"
+    },
+    "require-dev": {
+      "humanmade/coding-standards": "^0.2.1"
+    }
 }

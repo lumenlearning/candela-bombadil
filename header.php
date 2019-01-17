@@ -71,7 +71,7 @@ if ( wp_title( '', false ) !== '' ) { print ' id="' . str_replace( ' ', '', strt
 
 				<!-- skip to content -->
 				<div class="skip-to-content">
-					<a href="#main-content">Skip to main content</a>
+					<a href="#content">Skip to main content</a>
 				</div>
 
 				<?php if ( bombadil_show_header() ) :?>
